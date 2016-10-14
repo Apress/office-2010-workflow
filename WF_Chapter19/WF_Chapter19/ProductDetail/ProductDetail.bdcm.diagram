@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<minimalLanguageDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="ProductDetail">
+  <modelRootMoniker Name="/ProductDetail" />
+  <nestedChildShapes>
+    <entityShape Id="7af2bb1b-82ea-4b97-b4ac-7c2598076107" absoluteBounds="0.5, 0.5, 1.5, 1.59568359375">
+      <entityMoniker name="WF_Chapter19.ProductDetail.ProductDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8d4e8a7b-16ff-43fe-bf21-600c32556ead" absoluteBounds="0.515, 0.91000000000000014, 1.4700000000000002, 0.44169108072916663" name="Identifiers" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="bc81e30e-704e-4311-ab28-4fa58c58e9f8" absoluteBounds="0.515, 1.3616910807291669, 1.4700000000000002, 0.63399251302083326" name="Methods" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </entityShape>
+    <entityShape Id="da19645d-61d4-45cb-87c5-b7507cb15b54" absoluteBounds="4.125, 0.5, 1.5, 2.172587890625">
+      <entityMoniker name="WF_Chapter19.ProductDetail.Review" />
+      <nestedChildShapes>
+        <elementListCompartment Id="87aaa484-3cea-498b-bf34-7ec121895bcc" absoluteBounds="4.1400000000000006, 0.91000000000000014, 1.4700000000000002, 0.44169108072916663" name="Identifiers" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="b181f24b-8031-460a-914b-07671765f144" absoluteBounds="4.1400000000000006, 1.3616910807291667, 1.4700000000000002, 1.2108968098958333" name="Methods" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </entityShape>
+  </nestedChildShapes>
+</minimalLanguageDiagram>

@@ -1,0 +1,5 @@
+C:\Books\OfficeWorkflow\Code\WF_Chapter17\FileService\bin\Debug\FileService.dll
+C:\Books\OfficeWorkflow\Code\WF_Chapter17\FileService\bin\Debug\FileService.pdb
+C:\Books\OfficeWorkflow\Code\WF_Chapter17\FileService\obj\Debug\ResolveAssemblyReference.cache
+C:\Books\OfficeWorkflow\Code\WF_Chapter17\FileService\obj\Debug\FileService.dll
+C:\Books\OfficeWorkflow\Code\WF_Chapter17\FileService\obj\Debug\FileService.pdb

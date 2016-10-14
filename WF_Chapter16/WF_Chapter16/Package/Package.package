@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="8d0056aa-db86-4fd3-8dae-aceedf48c0e6" solutionId="8d0056aa-db86-4fd3-8dae-aceedf48c0e6" resetWebServer="false" name="WF_Chapter16" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <customAssembly location="ActivityLibrary.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\ActivityLibrary\bin\Debug\ActivityLibrary.dll">
+      <safeControls>
+        <safeControl assemblyName="ActivityLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9d6384a93fc3e8f6" namespaceName="ActivityLibrary" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </customAssembly>
+  </assemblies>
+  <features>
+    <featureReference itemId="fd4ab10f-6018-4755-82d1-65b76147bde0" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="71091d4f-e7d8-432e-8e93-b6679efb961e" />
+  </projectItems>
+</package>

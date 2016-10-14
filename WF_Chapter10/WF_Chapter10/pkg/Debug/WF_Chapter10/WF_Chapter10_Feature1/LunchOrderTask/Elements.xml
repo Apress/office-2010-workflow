@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  
+  <!-- Define the new fields that are needed -->
+  <Field
+   ID="{4E4628C2-80DE-454A-ABCC-C34C8BA60CCA}"
+   Type="Text"
+   Name="MenuUrl"
+   DisplayName="MenuUrl"
+   Sealed="TRUE"
+   StaticName="MenuUrl">
+  </Field>
+  <Field
+    ID="{17AABD7C-AB2D-429E-8AAD-CF039E0CC0EB}"
+    Type="Text"
+    MaxLength="50"
+    Name="Entree"
+    DisplayName="Entree"
+    Sealed="TRUE"
+    StaticName="Entree">
+  </Field>
+  <Field
+    ID="{A2997F75-A827-4346-B8FA-113A14B25DCE}"
+    Type="Text"
+    MaxLength="50"
+    Name="Sides"
+    DisplayName="Sides"
+    Sealed="TRUE"
+    StaticName="Sides">
+  </Field>
+  <Field
+    ID="{B258A417-2F62-4D58-9286-798D340AC048}"
+    Type="Note"
+    Name="SpecialInstructions"
+    DisplayName="SpecialInstructions"
+    Sealed="TRUE"
+    StaticName="SpecialInstructions">
+  </Field>
+  <Field
+    ID="{44E3D93E-5743-4471-AE45-3D58217AEFD1}"
+    Type="Boolean"
+    Name="NoThanks"
+    DisplayName="NoThanks"
+    Sealed="TRUE"
+    StaticName="NoThanks">
+  </Field>
+
+  <!-- Parent ContentType: Workflow Task (0x010801) -->
+  <ContentType ID="0x010801000da2ad56f41a465bbaa3311519728c2c"
+               Name="WF_Chapter10 - LunchOrderTask"
+               Group="Custom Content Types"
+               Description="Lunch Order Details"
+               Version="0">
+    
+    <!-- Include the new fields in this content type -->
+    <FieldRefs>
+      <FieldRef
+        ID="{4E4628C2-80DE-454A-ABCC-C34C8BA60CCA}"
+        Name="MenuUrl"
+        Required="FALSE"
+        ShowInNewForm="FALSE"
+        ShowInDisplayForm="TRUE"
+        ShowInEditForm="TRUE"/>
+      <FieldRef
+        ID="{17AABD7C-AB2D-429E-8AAD-CF039E0CC0EB}"
+        Name="Entree"
+        Required="FALSE"
+        ShowInNewForm="FALSE"
+        ShowInDisplayForm="TRUE"
+        ShowInEditForm="TRUE"/>
+      <FieldRef
+        ID="{A2997F75-A827-4346-B8FA-113A14B25DCE}"
+        Name="Sides"
+        Required="FALSE"
+        ShowInNewForm="FALSE"
+        ShowInDisplayForm="TRUE"
+        ShowInEditForm="TRUE"/>
+      <FieldRef
+        ID="{B258A417-2F62-4D58-9286-798D340AC048}"
+        Name="SpecialInstructions"
+        Required="FALSE"
+        ShowInNewForm="FALSE"
+        ShowInDisplayForm="TRUE"
+        ShowInEditForm="TRUE"
+        NumLines="2"/>
+      <FieldRef
+        ID="{44E3D93E-5743-4471-AE45-3D58217AEFD1}"
+        Name="NoThanks"
+        Required="FALSE"
+        ShowInNewForm="FALSE"
+        ShowInDisplayForm="TRUE"
+        ShowInEditForm="TRUE"
+        DefaultValue="FALSE"/>
+    </FieldRefs>
+  </ContentType>
+</Elements>

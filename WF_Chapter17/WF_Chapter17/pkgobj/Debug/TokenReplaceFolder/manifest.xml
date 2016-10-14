@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="811051cb-016a-4659-a782-f422313f7081" SharePointProductVersion="14.0">
+  <Assemblies>
+    <Assembly Location="FileService.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="FileService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=75da00303dcde51d " Namespace="FileService" TypeName="*" />
+      </SafeControls>
+    </Assembly>
+    <Assembly Location="WF_Chapter17.dll" DeploymentTarget="GlobalAssemblyCache" />
+  </Assemblies>
+  <FeatureManifests>
+    <FeatureManifest Location="WF_Chapter17_Feature1\Feature.xml" />
+    <FeatureManifest Location="WF_Chapter17_Feature2\Feature.xml" />
+  </FeatureManifests>
+</Solution>

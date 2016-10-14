@@ -1,0 +1,5 @@
+C:\Books\OfficeWorkflow\Code\WF_Chapter16\WF_Chapter16\bin\Debug\WF_Chapter16.dll
+C:\Books\OfficeWorkflow\Code\WF_Chapter16\WF_Chapter16\bin\Debug\WF_Chapter16.pdb
+C:\Books\OfficeWorkflow\Code\WF_Chapter16\WF_Chapter16\obj\Debug\ResolveAssemblyReference.cache
+C:\Books\OfficeWorkflow\Code\WF_Chapter16\WF_Chapter16\obj\Debug\WF_Chapter16.dll
+C:\Books\OfficeWorkflow\Code\WF_Chapter16\WF_Chapter16\obj\Debug\WF_Chapter16.pdb

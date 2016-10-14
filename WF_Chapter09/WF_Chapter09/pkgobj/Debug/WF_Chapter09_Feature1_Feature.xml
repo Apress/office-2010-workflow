@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="282db436-723d-4d5d-a8a1-ba10a3c107bb" Scope="Site" Title="WF_Chapter09 Feature1">
+  <ElementManifests>
+    <ElementManifest Location="CheckTasksWorkflow\Elements.xml" />
+  </ElementManifests>
+</Feature>

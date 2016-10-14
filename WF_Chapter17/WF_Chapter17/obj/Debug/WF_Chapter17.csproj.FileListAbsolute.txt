@@ -1,0 +1,7 @@
+C:\Books\OfficeWorkflow\Code\WF_Chapter17\WF_Chapter17\bin\Debug\WF_Chapter17.dll
+C:\Books\OfficeWorkflow\Code\WF_Chapter17\WF_Chapter17\bin\Debug\WF_Chapter17.pdb
+C:\Books\OfficeWorkflow\Code\WF_Chapter17\WF_Chapter17\obj\Debug\ResolveAssemblyReference.cache
+C:\Books\OfficeWorkflow\Code\WF_Chapter17\WF_Chapter17\obj\Debug\WF_Chapter17.dll
+C:\Books\OfficeWorkflow\Code\WF_Chapter17\WF_Chapter17\obj\Debug\WF_Chapter17.pdb
+C:\Books\OfficeWorkflow\Code\WF_Chapter17\WF_Chapter17\bin\Debug\FileService.dll
+C:\Books\OfficeWorkflow\Code\WF_Chapter17\WF_Chapter17\bin\Debug\FileService.pdb

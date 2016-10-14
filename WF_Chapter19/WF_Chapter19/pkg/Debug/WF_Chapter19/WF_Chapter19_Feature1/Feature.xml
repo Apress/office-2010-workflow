@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="e17b9e6c-4159-40f8-be68-f0c6e62ba557" ReceiverAssembly="Microsoft.Office.SharePoint.ClientExtensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" ReceiverClass="Microsoft.Office.SharePoint.ClientExtensions.Deployment.ImportModelReceiver" Scope="Farm" Title="WF_Chapter19 Feature1">
+  <ElementManifests>
+    <ElementFile Location="ProductDetail\ProductDetail.bdcm" />
+    <ElementFile Location="BdcAssemblies\WF_Chapter19.dll" />
+  </ElementManifests>
+  <Properties>
+    <Property Key="IncrementalUpdate" Value="true" />
+    <Property Key="ModelFileName" Value="ProductDetail\ProductDetail.bdcm" />
+    <Property Key="ProductDetail" Value="BdcAssemblies\WF_Chapter19.dll" />
+    <Property Key="SiteUrl" Value="http://omega5/part5/" />
+  </Properties>
+</Feature>

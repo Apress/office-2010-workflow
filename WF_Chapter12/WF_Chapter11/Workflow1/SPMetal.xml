@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Web AccessModifier="Internal"
+  xmlns="http://schemas.microsoft.com/SharePoint/2009/spmetal">
+  <!--<List Name="Tasks">
+    <ContentType Name="WF_Chapter10 - LunchOrderTask" Class="LunchOrders" />
+  </List>-->
+  <!--<ExcludeOtherLists />-->
+  <!--<ExcludeList Name="Shared Document" />-->
+  <!--<ContentType Name="Workflow Task" />-->
+  <ContentType Name="WF_Chapter10 - LunchOrderTask" Class="LunchOrderTask" />
+  <!--<ExcludeOtherContentTypes />-->
+  <!--<ExcludeContentType Name="Document" />-->
+  <IncludeHiddenContentTypes/>
+</Web>
+

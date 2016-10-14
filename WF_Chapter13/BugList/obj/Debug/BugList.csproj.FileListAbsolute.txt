@@ -1,0 +1,5 @@
+C:\Books\OfficeWorkflow\Code\WF_Chapter13\BugList\bin\Debug\BugList.dll
+C:\Books\OfficeWorkflow\Code\WF_Chapter13\BugList\bin\Debug\BugList.pdb
+C:\Books\OfficeWorkflow\Code\WF_Chapter13\BugList\obj\Debug\ResolveAssemblyReference.cache
+C:\Books\OfficeWorkflow\Code\WF_Chapter13\BugList\obj\Debug\BugList.dll
+C:\Books\OfficeWorkflow\Code\WF_Chapter13\BugList\obj\Debug\BugList.pdb

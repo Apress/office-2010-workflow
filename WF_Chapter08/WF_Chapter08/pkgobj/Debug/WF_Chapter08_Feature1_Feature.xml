@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Description="My SharePoint Workflow Feature" Id="8a3ba656-5e3e-4ab0-92c0-4b7f4cd32d54" Scope="Site" Title="WF_Chapter08 Feature1">
+  <Properties>
+    <Property Key="GloballyAvailable" Value="true" />
+  </Properties>
+  <ElementManifests>
+    <ElementManifest Location="Workflow1\Elements.xml" />
+  </ElementManifests>
+</Feature>

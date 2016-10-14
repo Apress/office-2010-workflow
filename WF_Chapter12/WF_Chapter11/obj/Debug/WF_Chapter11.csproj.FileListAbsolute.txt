@@ -1,0 +1,10 @@
+C:\Books\OfficeWorkflow\Code\WF_Chapter11\WF_Chapter11\obj\Debug\ResolveAssemblyReference.cache
+C:\Books\OfficeWorkflow\Code\WF_Chapter11\WF_Chapter11\bin\Debug\WF_Chapter11.dll
+C:\Books\OfficeWorkflow\Code\WF_Chapter11\WF_Chapter11\bin\Debug\WF_Chapter11.pdb
+C:\Books\OfficeWorkflow\Code\WF_Chapter11\WF_Chapter11\obj\Debug\WF_Chapter11.dll
+C:\Books\OfficeWorkflow\Code\WF_Chapter11\WF_Chapter11\obj\Debug\WF_Chapter11.pdb
+C:\Books\OfficeWorkflow\Code\WF_Chapter12\WF_Chapter11\bin\Debug\WF_Chapter11.dll
+C:\Books\OfficeWorkflow\Code\WF_Chapter12\WF_Chapter11\bin\Debug\WF_Chapter11.pdb
+C:\Books\OfficeWorkflow\Code\WF_Chapter12\WF_Chapter11\obj\Debug\ResolveAssemblyReference.cache
+C:\Books\OfficeWorkflow\Code\WF_Chapter12\WF_Chapter11\obj\Debug\WF_Chapter11.dll
+C:\Books\OfficeWorkflow\Code\WF_Chapter12\WF_Chapter11\obj\Debug\WF_Chapter11.pdb

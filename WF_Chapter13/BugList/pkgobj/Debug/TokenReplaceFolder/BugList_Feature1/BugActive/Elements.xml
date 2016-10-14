@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Workflow Task (0x010801) -->
+  <ContentType ID="0x010801006f51849cf46b42939046cfd9cf6d3e0b"
+               Name="BugActive"
+               Group="Custom Content Types"
+               Description="Bug - Active"
+               Version="0">
+    <FieldRefs>
+      <FieldRef ID="{E50B3B2E-93B3-4B30-BCE2-29A2168CB635}"
+                Name="BugWAD"
+                Required="FALSE"
+                ShowInNewForm="FALSE"
+                ShowInDisplayForm="TRUE"
+                ShowInEditForm="TRUE"/>
+      <FieldRef ID="{79C98C47-B7AC-4CE8-96DE-13B1BEEC3E05}"
+                Name="BugWaiting"
+                Required="FALSE"
+                ShowInNewForm="FALSE"
+                ShowInDisplayForm="TRUE"
+                ShowInEditForm="TRUE"/>
+      <FieldRef ID="{AD4B49AC-8138-4825-962C-6D38536E09F1}"
+                Name="BugStarted"
+                Required="FALSE"
+                ShowInNewForm="FALSE"
+                ShowInDisplayForm="TRUE"
+                ShowInEditForm="TRUE"/>
+      <FieldRef ID="{FC7781A6-150C-4CC6-BE72-55DFCF8EA5B2}"
+                Name="BugFixed"
+                Required="FALSE"
+                ShowInNewForm="FALSE"
+                ShowInDisplayForm="TRUE"
+                ShowInEditForm="TRUE"/>
+      <FieldRef ID="{F1C11979-1403-45AF-86CA-6CB80788A38D}"
+                Name="Resolution"
+                Required="FALSE"
+                ShowInNewForm="FALSE"
+                ShowInDisplayForm="TRUE"
+                ShowInEditForm="TRUE"/>
+    </FieldRefs>
+  </ContentType>
+</Elements>

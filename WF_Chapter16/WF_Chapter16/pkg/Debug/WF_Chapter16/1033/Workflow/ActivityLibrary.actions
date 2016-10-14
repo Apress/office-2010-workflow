@@ -1,0 +1,27 @@
+﻿<WorkflowInfo>
+  <Actions Sequential="then" Parallel="and">
+    <Action Name="Create Event"
+            ClassName="ActivityLibrary.CreateEvent"
+            Assembly="ActivityLibrary, Version=1.0.0.0, Culture=neutral, 
+                      PublicKeyToken=9d6384a93fc3e8f6"
+            AppliesTo="all"
+            Category="Chapter16">
+      <RuleDesigner Sentence="Create Event %1 starting at %2 for %3 seconds.">
+        <FieldBind Field="Title" Text="Title" Id="1"
+                   DesignerType="TextArea"/>
+        <FieldBind Field="StartTime" Text="Start Time" Id="2"
+                   DesignerType="Date"/>
+        <FieldBind Field="Duration" Text="Duration (seconds)" Id="3"
+                   DesignerType="Integer"/>
+      </RuleDesigner>
+      <Parameters>
+        <Parameter Name="Title" Type="System.String, mscorlib"
+                   Direction="In" />
+        <Parameter Name="StartTime" Type="System.DateTime, mscorlib"
+                   Direction="In" />
+        <Parameter Name="Duration" Type="System.Int32, mscorlib"
+                   Direction="In" />
+      </Parameters>
+    </Action>
+  </Actions>
+</WorkflowInfo>

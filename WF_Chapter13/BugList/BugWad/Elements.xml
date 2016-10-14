@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Workflow Task (0x010801) -->
+  <ContentType ID="0x010801002bb2e8c199c54880b6f7495585c1e967"
+               Name="BugWad"
+               Group="Custom Content Types"
+               Description="Bug - Wad"
+               Version="0">
+    <FieldRefs>
+      <FieldRef ID="{3868124A-D162-4A99-8A61-C91E593D68A7}"
+                Name="BugClosed"
+                Required="FALSE"
+                ShowInNewForm="FALSE"
+                ShowInDisplayForm="TRUE"
+                ShowInEditForm="TRUE"/>
+      <FieldRef ID="{69E039E9-F4D9-4CBB-A4C2-346B79FA8F6A}"
+                Name="BugReSubmit"
+                Required="FALSE"
+                ShowInNewForm="FALSE"
+                ShowInDisplayForm="TRUE"
+                ShowInEditForm="TRUE"/>
+      <FieldRef ID="{AE86C874-C3C0-459A-8160-01B60D58D01E}"
+                Name="Feedback"
+                Required="FALSE"
+                ShowInNewForm="FALSE"
+                ShowInDisplayForm="TRUE"
+                ShowInEditForm="TRUE"/>
+    </FieldRefs>
+  </ContentType>
+</Elements>

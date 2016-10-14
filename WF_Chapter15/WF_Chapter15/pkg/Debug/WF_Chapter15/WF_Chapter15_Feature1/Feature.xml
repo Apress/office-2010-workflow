@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="2a4c2da0-6def-4a4a-afa1-9a8daf34d7ce" Scope="Site" Title="Converted workflows">
+  <ElementManifests>
+    <ElementManifest Location="Event_ReviewFT\Elements.xml" />
+  </ElementManifests>
+</Feature>

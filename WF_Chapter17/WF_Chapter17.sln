@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WF_Chapter17", "WF_Chapter17\WF_Chapter17.csproj", "{1002045D-35B0-466F-A3D8-979DCAE2EE74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileService", "FileService\FileService.csproj", "{6AEB25C8-38F7-4D33-9931-6EEBEFEE927C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1002045D-35B0-466F-A3D8-979DCAE2EE74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1002045D-35B0-466F-A3D8-979DCAE2EE74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1002045D-35B0-466F-A3D8-979DCAE2EE74}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{1002045D-35B0-466F-A3D8-979DCAE2EE74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1002045D-35B0-466F-A3D8-979DCAE2EE74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1002045D-35B0-466F-A3D8-979DCAE2EE74}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{6AEB25C8-38F7-4D33-9931-6EEBEFEE927C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AEB25C8-38F7-4D33-9931-6EEBEFEE927C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AEB25C8-38F7-4D33-9931-6EEBEFEE927C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AEB25C8-38F7-4D33-9931-6EEBEFEE927C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

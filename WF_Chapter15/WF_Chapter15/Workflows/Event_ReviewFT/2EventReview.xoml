@@ -1,0 +1,66 @@
+﻿<ns0:RootWorkflowActivityWithData x:Class="WF_Chapter15.Event_ReviewFT" x:Name="Event_ReviewFT" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/workflow" xmlns:ns1="clr-namespace:Microsoft.SharePoint.WorkflowActions.WithKey;Assembly=Microsoft.SharePoint.WorkflowActions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:ns0="clr-namespace:Microsoft.SharePoint.WorkflowActions;Assembly=Microsoft.SharePoint.WorkflowActions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+	<ns0:RootWorkflowActivityWithData.WorkflowFields>
+		<ns0:WorkflowDataField Type="System.String" Name="__list" />
+		<ns0:WorkflowDataField Type="Microsoft.SharePoint.Workflow.SPItemKey, Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Name="__item" />
+		<ns0:WorkflowDataField Type="Microsoft.SharePoint.WorkflowActions.WorkflowContext" Name="__context" />
+		<ns0:WorkflowDataField Type="Microsoft.SharePoint.Workflow.SPWorkflowActivationProperties" Name="__initParams" />
+		<ns0:WorkflowDataField Type="System.Guid" Name="__workflowId" />
+		<ns0:WorkflowDataField Type="System.String" Name="__historylist" />
+		<ns0:WorkflowDataField Type="System.String" Name="__tasklist" />
+		<ns0:WorkflowDataField Type="System.Int32" Name="__itemId" />
+		<ns0:WorkflowDataField Type="Microsoft.SharePoint.Workflow.SPItemKey, Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Name="create" />
+	</ns0:RootWorkflowActivityWithData.WorkflowFields>
+	<ns0:OnWorkflowActivated EventName="OnWorkflowActivated" WorkflowProperties="{ActivityBind Event_ReviewFT,Path=__initParams}" x:Name="OnWorkflowActivated1">
+		<ns0:OnWorkflowActivated.CorrelationToken>
+			<wf0:CorrelationToken OwnerActivityName="Event_ReviewFT" Name="refObject" xmlns:wf0="http://schemas.microsoft.com/winfx/2006/xaml/workflow" />
+		</ns0:OnWorkflowActivated.CorrelationToken>
+	</ns0:OnWorkflowActivated>
+	<ns0:ApplyActivation x:Name="ApplyActivation1" __WorkflowProperties="{ActivityBind Event_ReviewFT,Path=__initParams}" __Context="{ActivityBind Event_ReviewFT,Path=__context}" />
+	<SequenceActivity Description="Step 1" x:Name="SequenceActivity1">
+		<ns1:LookupActivity ListId="{ActivityBind Event_ReviewFT,Path=__list}" LookupFunction="LookupInt" __Context="{ActivityBind Event_ReviewFT,Path=__context}" ListItem="{ActivityBind Event_ReviewFT,Path=__item}" FieldName="Duration" x:Name="LookupActivity1" />
+		<ns0:CoerceStringActivity CoercionFunction="AsDNString" __Context="{ActivityBind Event_ReviewFT,Path=__context}" x:Name="CoerceStringActivity1">
+			<ns0:CoerceActivity.Value>
+				<ActivityBind Path="ReturnValue" Name="LookupActivity1" />
+			</ns0:CoerceActivity.Value>
+		</ns0:CoerceStringActivity>
+		<ns0:DynamicStringActivity x:Name="DynamicStringActivity1" Value="The workflow has started; the duration is [%CoerceStringActivity1.ReturnValue%] seconds." __Context="{ActivityBind Event_ReviewFT,Path=__context}" />
+		<ns0:LogToHistoryListActivity HistoryDescription="{ActivityBind DynamicStringActivity1,Path=ReturnValue}" HistoryOutcome="" EventId="WorkflowComment" x:Name="LogToHistoryListActivity1" UserId="-1" OtherData="" Duration="00:00:00" />
+		<IfElseActivity x:Name="IfElseActivity1">
+			<IfElseBranchActivity x:Name="IfElseBranchActivity1">
+				<IfElseBranchActivity.Condition>
+					<RuleConditionReference ConditionName="__Rule_IfElseBranchActivity1" />
+				</IfElseBranchActivity.Condition>
+				<ns0:ClearHashtableActivity Collection="{x:Null}" x:Name="ClearHashtableActivity1" />
+				<ns1:LookupActivity ListId="{ActivityBind Event_ReviewFT,Path=__list}" LookupFunction="LookupString" __Context="{ActivityBind Event_ReviewFT,Path=__context}" ListItem="{ActivityBind Event_ReviewFT,Path=__item}" FieldName="Title" x:Name="LookupActivity2" />
+				<ns0:CoerceStringActivity CoercionFunction="AsDNString" __Context="{ActivityBind Event_ReviewFT,Path=__context}" x:Name="CoerceStringActivity2">
+					<ns0:CoerceActivity.Value>
+						<ActivityBind Path="ReturnValue" Name="LookupActivity2" />
+					</ns0:CoerceActivity.Value>
+				</ns0:CoerceStringActivity>
+				<ns0:DynamicStringActivity x:Name="DynamicStringActivity2" Value="New Event: [%CoerceStringActivity2.ReturnValue%]" __Context="{ActivityBind Event_ReviewFT,Path=__context}" />
+				<ns0:AddToHashtableActivity ValueType="System.String" Collection="{ActivityBind ClearHashtableActivity1,Path=Collection}" x:Name="AddToHashtableActivity1" Key="Title">
+					<ns0:AddToHashtableActivity.Value>
+						<ActivityBind Path="ReturnValue" Name="DynamicStringActivity2" />
+					</ns0:AddToHashtableActivity.Value>
+				</ns0:AddToHashtableActivity>
+				<ns1:LookupActivity ListId="{ActivityBind Event_ReviewFT,Path=__list}" LookupFunction="LookupUser" __Context="{ActivityBind Event_ReviewFT,Path=__context}" ListItem="{ActivityBind Event_ReviewFT,Path=__item}" FieldName="Author" x:Name="LookupActivity3" />
+				<ns0:CoerceStringActivity CoercionFunction="LoginNameAsText" __Context="{ActivityBind Event_ReviewFT,Path=__context}" x:Name="CoerceStringActivity3">
+					<ns0:CoerceActivity.Value>
+						<ActivityBind Path="ReturnValue" Name="LookupActivity3" />
+					</ns0:CoerceActivity.Value>
+				</ns0:CoerceStringActivity>
+				<ns0:AddToHashtableActivity ValueType="User" Collection="{ActivityBind ClearHashtableActivity1,Path=Collection}" x:Name="AddToHashtableActivity2" Key="AssignedTo">
+					<ns0:AddToHashtableActivity.Value>
+						<ActivityBind Path="ReturnValue" Name="CoerceStringActivity3" />
+					</ns0:AddToHashtableActivity.Value>
+				</ns0:AddToHashtableActivity>
+				<ns1:CreateItemActivity ListId="{ActivityBind Event_ReviewFT,Path=__tasklist}" x:Name="CreateItemActivity1" __Context="{ActivityBind Event_ReviewFT,Path=__context}" ItemProperties="{ActivityBind ClearHashtableActivity1,Path=Collection}" NewItemId="{ActivityBind Event_ReviewFT,Path=create}" Overwrite="False" />
+				<ns0:SendEmail Headers="{x:Null}" CC="{x:Null}" BCC="{x:Null}" x:Name="sendEmail1" To="mark@thecreativepeople.local" Subject="New Event Created" IncludeStatus="False" From="sharepoint@thecreativepeople.local" Body="A new event was added which needs to be reviewed. Check the Tasks list for details.">
+					<ns0:SendEmail.CorrelationToken>
+						<wf0:CorrelationToken OwnerActivityName="Event_ReviewFT" Name="refObject" xmlns:wf0="http://schemas.microsoft.com/winfx/2006/xaml/workflow" />
+					</ns0:SendEmail.CorrelationToken>
+				</ns0:SendEmail>
+			</IfElseBranchActivity>
+		</IfElseActivity>
+	</SequenceActivity>
+</ns0:RootWorkflowActivityWithData>

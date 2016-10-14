@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SharePointSiteUrl>http://omega5/part3/</SharePointSiteUrl>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{BB1F664B-9266-4fd6-B973-E1E44974B511}">
+        <ProjectStore>
+          <SharePointStartupItem>Workflow1</SharePointStartupItem>
+        </ProjectStore>
+        <ProjectItemStore Id="{e7b72b3e-c82b-4b89-96f1-a50197c46f55}">
+          <DisplayName>WF_Chapter10</DisplayName>
+          <HistoryList>Workflow History</HistoryList>
+          <HistoryListGuid>{9badb9ca-551f-4d19-9caa-1ea385073e70}</HistoryListGuid>
+          <TaskList>Tasks</TaskList>
+          <TaskListGuid>{7916d83e-538f-428c-b540-5cef0ae69dad}</TaskListGuid>
+          <AutoAssociate>true</AutoAssociate>
+          <ManualStart>true</ManualStart>
+        </ProjectItemStore>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

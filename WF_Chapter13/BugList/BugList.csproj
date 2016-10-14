@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5EAC022A-99AE-42DF-9BBE-3E39F6FF558B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BugList</RootNamespace>
+    <AssemblyName>BugList</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BB1F664B-9266-4fd6-B973-E1E44974B511};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+    <ActiveDeploymentConfiguration>No Retraction</ActiveDeploymentConfiguration>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Security" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BugActive\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5ae3654e-7e52-4401-a328-4e25bf250595}</SharePointProjectItemId>
+    </None>
+    <None Include="BugAssigned\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{309bb162-051e-4cc5-b811-fc18c43380ce}</SharePointProjectItemId>
+    </None>
+    <None Include="BugFixed\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{048cd189-9aab-41d4-a536-c0a6d9eacfd8}</SharePointProjectItemId>
+    </None>
+    <None Include="BugList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{7148e811-19b6-4560-a654-51b6d5312032}</SharePointProjectItemId>
+    </None>
+    <None Include="BugPending\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{de38557d-de2e-4502-9a95-1b42e436f933}</SharePointProjectItemId>
+    </None>
+    <None Include="BugWad\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5a59ea96-7a3d-4a0b-ad1b-2de75dcc713e}</SharePointProjectItemId>
+    </None>
+    <None Include="BugWaiting\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{ce138ec2-eca9-4849-a2cb-7b1149e7a178}</SharePointProjectItemId>
+    </None>
+    <None Include="Bug\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{8fb8dc46-0894-4180-b4d5-877afb57ee7e}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\Feature1\Feature1.feature">
+      <FeatureId>{8f3e3672-a919-4273-be8c-e77d38aa73b4}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Package\Package.package">
+      <PackageId>{0d4e66d5-9837-4ef9-bd4f-d2b80a186b6d}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="BugActive\Elements.xml" />
+    <Content Include="BugAssigned\Elements.xml" />
+    <Content Include="BugFixed\Elements.xml" />
+    <Content Include="BugList\Elements.xml" />
+    <Content Include="BugList\Schema.xml" />
+    <Content Include="BugPending\Elements.xml" />
+    <Content Include="BugWad\Elements.xml" />
+    <Content Include="BugWaiting\Elements.xml" />
+    <Content Include="Bug\Elements.xml" />
+    <Content Include="Features\Feature1\Feature1.Template.xml">
+      <DependentUpon>Feature1.feature</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{BB1F664B-9266-4fd6-B973-E1E44974B511}">
+        <DeploymentConfigurations>
+          <DeploymentConfiguration Name="No Retraction">
+            <DeploymentSteps>Microsoft.VisualStudio.SharePoint.PreDeploymentCommand;Microsoft.VisualStudio.SharePoint.RecycleApplicationPool;Microsoft.VisualStudio.SharePoint.AddSolution;Microsoft.VisualStudio.SharePoint.ActivateFeatures;Microsoft.VisualStudio.SharePoint.PostDeploymentCommand</DeploymentSteps>
+            <RetractionSteps>Microsoft.VisualStudio.SharePoint.RecycleApplicationPool;Microsoft.VisualStudio.SharePoint.RetractSolution</RetractionSteps>
+          </DeploymentConfiguration>
+        </DeploymentConfigurations>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

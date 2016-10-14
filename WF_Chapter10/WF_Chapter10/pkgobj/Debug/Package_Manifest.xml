@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="251dd1fc-da55-46a4-9366-c9f0564d5da2" SharePointProductVersion="14.0">
+  <Assemblies>
+    <Assembly Location="WF_Chapter10.dll" DeploymentTarget="GlobalAssemblyCache" />
+  </Assemblies>
+  <TemplateFiles>
+    <TemplateFile Location="LAYOUTS\WF_Chapter10\Workflow1\Chapter10Initiation.aspx" />
+  </TemplateFiles>
+  <FeatureManifests>
+    <FeatureManifest Location="WF_Chapter10_Feature1\Feature.xml" />
+  </FeatureManifests>
+</Solution>

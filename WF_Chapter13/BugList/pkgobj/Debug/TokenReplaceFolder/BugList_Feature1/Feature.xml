@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Title="BugList Feature1" Id="a8526f45-6431-40fb-bf2c-ed721327cad2" Scope="Web">
+  <ElementManifests>
+    <ElementManifest Location="Bug\Elements.xml" />
+    <ElementManifest Location="BugList2\Elements.xml" />
+    <ElementFile Location="BugList\Schema.xml" />
+    <ElementManifest Location="BugActive\Elements.xml" />
+    <ElementManifest Location="BugAssigned\Elements.xml" />
+    <ElementManifest Location="BugFixed\Elements.xml" />
+    <ElementManifest Location="BugPending\Elements.xml" />
+    <ElementManifest Location="BugWad\Elements.xml" />
+    <ElementManifest Location="BugWaiting\Elements.xml" />
+  </ElementManifests>
+</Feature>

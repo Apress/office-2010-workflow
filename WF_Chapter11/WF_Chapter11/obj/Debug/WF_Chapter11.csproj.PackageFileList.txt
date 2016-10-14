@@ -1,0 +1,1 @@
+bin\Debug\WF_Chapter11.wsp

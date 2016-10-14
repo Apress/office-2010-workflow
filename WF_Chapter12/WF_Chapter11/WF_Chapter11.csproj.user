@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SharePointSiteUrl>http://omega5/part3/</SharePointSiteUrl>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{BB1F664B-9266-4fd6-B973-E1E44974B511}">
+        <ProjectStore>
+          <SharePointStartupItem>Workflow1</SharePointStartupItem>
+        </ProjectStore>
+        <ProjectItemStore Id="{ce565296-e03d-4fec-8f56-65917f612cf6}">
+          <DisplayName>WF_Chapter12</DisplayName>
+          <HistoryList>Workflow History</HistoryList>
+          <HistoryListGuid>{9badb9ca-551f-4d19-9caa-1ea385073e70}</HistoryListGuid>
+          <TaskList>Tasks</TaskList>
+          <TaskListGuid>{7916d83e-538f-428c-b540-5cef0ae69dad}</TaskListGuid>
+          <AutoAssociate>true</AutoAssociate>
+          <ManualStart>true</ManualStart>
+          <ListURL>http://omega5/Part3/Lists/Calendar/calendar.aspx</ListURL>
+          <TargetList>Calendar</TargetList>
+          <TargetListGuid>{52bde210-f147-45db-b43e-568e28d576c5}</TargetListGuid>
+          <StartOnCreate>false</StartOnCreate>
+          <StartOnChange>false</StartOnChange>
+        </ProjectItemStore>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

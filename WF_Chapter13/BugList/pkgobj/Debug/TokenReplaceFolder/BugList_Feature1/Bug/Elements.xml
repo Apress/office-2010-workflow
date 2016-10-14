@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  
+  <Field ID="{45C9B417-D32F-4F4F-9D49-481A2890F78D}"
+       Type="Choice"
+       BaseType="Text"
+       Name="BugStatus"
+       DisplayName="BugStatus"
+       Sealed="TRUE"
+       StaticName="BugStatus">
+    <CHOICES>
+      <CHOICE>Pending</CHOICE>
+      <CHOICE>Working As Designed</CHOICE>
+      <CHOICE>Assigned</CHOICE>
+      <CHOICE>Active</CHOICE>
+      <CHOICE>Waiting</CHOICE>
+      <CHOICE>Fixed</CHOICE>
+      <CHOICE>Tested</CHOICE>
+      <CHOICE>Closed</CHOICE>
+    </CHOICES>
+  </Field>
+  <Field ID="{91ECF95D-0C9C-419D-AD8A-4ACAEECF9833}"
+         Type="Note"
+         Name="Description"
+         DisplayName="Description"
+         Sealed="TRUE"
+         StaticName="Description">
+  </Field>
+  <Field ID="{F1C11979-1403-45AF-86CA-6CB80788A38D}"
+         Type="Note"
+         Name="Resolution"
+         DisplayName="Resolution"
+         Sealed="TRUE"
+         StaticName="Resolution">
+  </Field>
+  <Field ID="{AE86C874-C3C0-459A-8160-01B60D58D01E}"
+         Type="Note"
+         Name="Feedback"
+         DisplayName="Feedback"
+         Sealed="TRUE"
+         StaticName="Feedback">
+  </Field>
+
+  <!-- These fields will be used by the task content types -->
+  <Field ID="{E50B3B2E-93B3-4B30-BCE2-29A2168CB635}"
+         Type="Boolean"
+         Name="BugWAD"
+         DisplayName="Working As Designed"
+         Sealed="TRUE"
+         StaticName="BugWAD">
+  </Field>
+  <Field ID="{79C98C47-B7AC-4CE8-96DE-13B1BEEC3E05}"
+         Type="Boolean"
+         Name="BugWaiting"
+         DisplayName="Waiting"
+         Sealed="TRUE"
+         StaticName="BugWaiting">
+  </Field>
+  <Field ID="{AD4B49AC-8138-4825-962C-6D38536E09F1}"
+         Type="Boolean"
+         Name="BugStarted"
+         DisplayName="Started"
+         Sealed="TRUE"
+         StaticName="BugStarted">
+  </Field>
+  <Field ID="{FC7781A6-150C-4CC6-BE72-55DFCF8EA5B2}"
+         Type="Boolean"
+         Name="BugFixed"
+         DisplayName="Fixed"
+         Sealed="TRUE"
+         StaticName="BugFixed">
+  </Field>
+  <Field ID="{9FB079A4-28C7-411E-829C-5891C19DF702}"
+         Type="Boolean"
+         Name="BugTested"
+         DisplayName="Tested"
+         Sealed="TRUE"
+         StaticName="BugTested">
+  </Field>
+  <Field ID="{4C1D9606-F044-4D43-AD00-AE3B912764FB}"
+         Type="Boolean"
+         Name="BugNotFixed"
+         DisplayName="Not Fixed"
+         Sealed="TRUE"
+         StaticName="BugNotFixed">
+  </Field>
+  <Field ID="{3868124A-D162-4A99-8A61-C91E593D68A7}"
+         Type="Boolean"
+         Name="BugClosed"
+         DisplayName="Closed"
+         Sealed="TRUE"
+         StaticName="BugClosed">
+  </Field>
+  <Field ID="{69E039E9-F4D9-4CBB-A4C2-346B79FA8F6A}"
+         Type="Boolean"
+         Name="BugReSubmit"
+         DisplayName="Re-submit"
+         Sealed="TRUE"
+         StaticName="BugReSubmit">
+  </Field>
+  <Field ID="{E7C4ED6D-38DD-4A5C-A6EE-14791E7BCC14}"
+         Type="Choice"
+         BaseType="Text"
+         Name="BugPriority"
+         DisplayName="Priority"
+         Sealed="TRUE"
+         StaticName="BugPriority">
+    <CHOICES>
+      <CHOICE>High</CHOICE>
+      <CHOICE>Normal</CHOICE>
+      <CHOICE>Low</CHOICE>
+    </CHOICES>
+  </Field>
+  <Field ID="{35A9F18D-6AA9-4580-838C-A9F4DCA2B85C}"
+         Type="User"
+         Name="BugAssign"
+         DisplayName="Assign To"
+         Sealed="TRUE"
+         StaticName="BugAssign">
+  </Field>
+
+  <!-- Parent ContentType: Item (0x01) -->
+  <ContentType ID="0x0100f0f7844f4fd24c57946f5d88cab09e0e"
+               Name="Bug"
+               Group="Custom Content Types"
+               Description="Information about a reported bug"
+               Version="0">
+    <FieldRefs>
+      <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}"
+                Name="Title"
+                Required="TRUE"
+                ShowInNewForm="TRUE"
+                ShowInDisplayForm="TRUE"
+                ShowInEditForm="TRUE"/>
+      <FieldRef ID="{9F8B4EE0-84B7-42c6-A094-5CBDE2115EB9}"
+                Name="Date Created"
+                Required="FALSE"
+                ShowInNewForm="FALSE"
+                ShowInDisplayForm="TRUE"
+                ShowInEditForm="TRUE"/>
+      <FieldRef ID="{45C9B417-D32F-4F4F-9D49-481A2890F78D}"
+                Name="BugStatus"
+                Required="TRUE"
+                ShowInNewForm="FALSE"
+                ShowInDisplayForm="TRUE"
+                ShowInEditForm="FALSE"/>
+      <FieldRef ID="{91ECF95D-0C9C-419D-AD8A-4ACAEECF9833}"
+                Name="Description"
+                Required="TRUE"
+                ShowInNewForm="TRUE"
+                ShowInDisplayForm="TRUE"
+                ShowInEditForm="TRUE"/>
+      <FieldRef ID="{a8eb573e-9e11-481a-a8c9-1104a54b2fbd}"
+                Name="Priority"
+                Required="FALSE"
+                ShowInNewForm="FALSE"
+                ShowInDisplayForm="TRUE"
+                ShowInEditForm="TRUE"/>
+      <FieldRef ID="{53101f38-dd2e-458c-b245-0c236cc13d1a}"
+                Name="AssignedTo"
+                Required="FALSE"
+                ShowInNewForm="FALSE"
+                ShowInDisplayForm="TRUE"
+                ShowInEditForm="TRUE"/>
+      <FieldRef ID="{24BFA3C2-E6A0-4651-80E9-3DB44BF52147}"
+                Name="DateCompleted"
+                Required="FALSE"
+                ShowInNewForm="FALSE"
+                ShowInDisplayForm="TRUE"
+                ShowInEditForm="TRUE"/>
+      <FieldRef ID="{F1C11979-1403-45AF-86CA-6CB80788A38D}"
+                Name="Resolution"
+                Required="FALSE"
+                ShowInNewForm="FALSE"
+                ShowInDisplayForm="TRUE"
+                ShowInEditForm="TRUE"/>
+      <FieldRef ID="{AE86C874-C3C0-459A-8160-01B60D58D01E}"
+                Name="Feedback"
+                Required="FALSE"
+                ShowInNewForm="FALSE"
+                ShowInDisplayForm="TRUE"
+                ShowInEditForm="TRUE"/>
+    </FieldRefs>
+  </ContentType>
+</Elements>

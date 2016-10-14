@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Workflow
+		Name="WF_Chapter15 - Event ReviewFT"
+		CodeBesideAssembly="WF_Chapter15, Version=1.0.0.0, Culture=neutral, PublicKeyToken=12c60576626a13ed"
+		CodeBesideClass="WF_Chapter15.Event_ReviewFT"
+		Description=""
+		Id="{5E3F4B27-0D82-4F52-B309-DA105A7AA0F2}"
+		InstantiationUrl="_layouts/IniWrkflIP.aspx">
+		<MetaData>
+			<AssociationCategories>List</AssociationCategories>
+			<Instantiation_FieldML>
+				<Fields />
+			</Instantiation_FieldML>
+			<Initiation_Parameters>
+				<Parameters />
+			</Initiation_Parameters>
+			<StatusPageUrl>_layouts/WrkStat.aspx</StatusPageUrl>
+		</MetaData>
+	</Workflow>
+</Elements>

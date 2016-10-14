@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Title="BugListWorkflow Feature1" Description="My SharePoint Workflow Feature" Id="68fe4138-f336-4bbc-90fd-e64506fb0704" Scope="Site">
+  <Properties>
+    <Property Key="GloballyAvailable" Value="true" />
+  </Properties>
+  <ElementManifests>
+    <ElementManifest Location="Workflow1\Elements.xml" />
+  </ElementManifests>
+</Feature>

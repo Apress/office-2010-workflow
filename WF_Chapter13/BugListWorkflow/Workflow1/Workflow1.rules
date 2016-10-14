@@ -1,0 +1,137 @@
+﻿<RuleDefinitions xmlns="http://schemas.microsoft.com/winfx/2006/xaml/workflow">
+	<RuleDefinitions.Conditions>
+		<RuleExpressionCondition Name="Working as Designed">
+			<RuleExpressionCondition.Expression>
+				<ns0:CodeFieldReferenceExpression FieldName="_wad" xmlns:ns0="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:CodeFieldReferenceExpression.TargetObject xmlns:ns1="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+						<ns2:CodeThisReferenceExpression xmlns:ns2="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+					</ns1:CodeFieldReferenceExpression.TargetObject>
+				</ns0:CodeFieldReferenceExpression>
+			</RuleExpressionCondition.Expression>
+		</RuleExpressionCondition>
+		<RuleExpressionCondition Name="Assigned">
+			<RuleExpressionCondition.Expression>
+				<ns3:CodeBinaryOperatorExpression Operator="GreaterThan" xmlns:ns3="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns4:CodeBinaryOperatorExpression.Right xmlns:ns4="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+						<ns5:CodePrimitiveExpression xmlns:ns5="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+							<ns6:CodePrimitiveExpression.Value xmlns:ns6="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+								<ns7:String xmlns:ns7="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"></ns7:String>
+							</ns6:CodePrimitiveExpression.Value>
+						</ns5:CodePrimitiveExpression>
+					</ns4:CodeBinaryOperatorExpression.Right>
+					<ns8:CodeBinaryOperatorExpression.Left xmlns:ns8="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+						<ns9:CodeFieldReferenceExpression FieldName="_assign" xmlns:ns9="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+							<ns10:CodeFieldReferenceExpression.TargetObject xmlns:ns10="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+								<ns11:CodeThisReferenceExpression xmlns:ns11="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+							</ns10:CodeFieldReferenceExpression.TargetObject>
+						</ns9:CodeFieldReferenceExpression>
+					</ns8:CodeBinaryOperatorExpression.Left>
+				</ns3:CodeBinaryOperatorExpression>
+			</RuleExpressionCondition.Expression>
+		</RuleExpressionCondition>
+		<RuleExpressionCondition Name="NotCreated">
+			<RuleExpressionCondition.Expression>
+				<ns12:CodeBinaryOperatorExpression Operator="ValueEquality" xmlns:ns12="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns13:CodeBinaryOperatorExpression.Right xmlns:ns13="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+						<ns14:CodeFieldReferenceExpression FieldName="Empty" xmlns:ns14="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+							<ns15:CodeFieldReferenceExpression.TargetObject xmlns:ns15="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+								<ns16:CodeTypeReferenceExpression Type="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:ns16="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+							</ns15:CodeFieldReferenceExpression.TargetObject>
+						</ns14:CodeFieldReferenceExpression>
+					</ns13:CodeBinaryOperatorExpression.Right>
+					<ns17:CodeBinaryOperatorExpression.Left xmlns:ns17="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+						<ns18:CodeFieldReferenceExpression FieldName="_workTaskId" xmlns:ns18="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+							<ns19:CodeFieldReferenceExpression.TargetObject xmlns:ns19="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+								<ns20:CodeThisReferenceExpression xmlns:ns20="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+							</ns19:CodeFieldReferenceExpression.TargetObject>
+						</ns18:CodeFieldReferenceExpression>
+					</ns17:CodeBinaryOperatorExpression.Left>
+				</ns12:CodeBinaryOperatorExpression>
+			</RuleExpressionCondition.Expression>
+		</RuleExpressionCondition>
+		<RuleExpressionCondition Name="Fixed">
+			<RuleExpressionCondition.Expression>
+				<ns21:CodeFieldReferenceExpression FieldName="_fixed" xmlns:ns21="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns22:CodeFieldReferenceExpression.TargetObject xmlns:ns22="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+						<ns23:CodeThisReferenceExpression xmlns:ns23="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+					</ns22:CodeFieldReferenceExpression.TargetObject>
+				</ns21:CodeFieldReferenceExpression>
+			</RuleExpressionCondition.Expression>
+		</RuleExpressionCondition>
+		<RuleExpressionCondition Name="Wad">
+			<RuleExpressionCondition.Expression>
+				<ns24:CodeFieldReferenceExpression FieldName="_wad" xmlns:ns24="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns25:CodeFieldReferenceExpression.TargetObject xmlns:ns25="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+						<ns26:CodeThisReferenceExpression xmlns:ns26="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+					</ns25:CodeFieldReferenceExpression.TargetObject>
+				</ns24:CodeFieldReferenceExpression>
+			</RuleExpressionCondition.Expression>
+		</RuleExpressionCondition>
+		<RuleExpressionCondition Name="Waiting">
+			<RuleExpressionCondition.Expression>
+				<ns27:CodeFieldReferenceExpression FieldName="_waiting" xmlns:ns27="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns28:CodeFieldReferenceExpression.TargetObject xmlns:ns28="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+						<ns29:CodeThisReferenceExpression xmlns:ns29="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+					</ns28:CodeFieldReferenceExpression.TargetObject>
+				</ns27:CodeFieldReferenceExpression>
+			</RuleExpressionCondition.Expression>
+		</RuleExpressionCondition>
+		<RuleExpressionCondition Name="Started">
+			<RuleExpressionCondition.Expression>
+				<ns30:CodeFieldReferenceExpression FieldName="_started" xmlns:ns30="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns31:CodeFieldReferenceExpression.TargetObject xmlns:ns31="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+						<ns32:CodeThisReferenceExpression xmlns:ns32="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+					</ns31:CodeFieldReferenceExpression.TargetObject>
+				</ns30:CodeFieldReferenceExpression>
+			</RuleExpressionCondition.Expression>
+		</RuleExpressionCondition>
+		<RuleExpressionCondition Name="NotStarted">
+			<RuleExpressionCondition.Expression>
+				<ns33:CodeBinaryOperatorExpression Operator="ValueEquality" xmlns:ns33="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns34:CodeBinaryOperatorExpression.Right xmlns:ns34="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+						<ns35:CodePrimitiveExpression xmlns:ns35="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+							<ns36:CodePrimitiveExpression.Value xmlns:ns36="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+								<ns37:Boolean xmlns:ns37="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">false</ns37:Boolean>
+							</ns36:CodePrimitiveExpression.Value>
+						</ns35:CodePrimitiveExpression>
+					</ns34:CodeBinaryOperatorExpression.Right>
+					<ns38:CodeBinaryOperatorExpression.Left xmlns:ns38="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+						<ns39:CodeFieldReferenceExpression FieldName="_started" xmlns:ns39="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+							<ns40:CodeFieldReferenceExpression.TargetObject xmlns:ns40="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+								<ns41:CodeThisReferenceExpression xmlns:ns41="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+							</ns40:CodeFieldReferenceExpression.TargetObject>
+						</ns39:CodeFieldReferenceExpression>
+					</ns38:CodeBinaryOperatorExpression.Left>
+				</ns33:CodeBinaryOperatorExpression>
+			</RuleExpressionCondition.Expression>
+		</RuleExpressionCondition>
+		<RuleExpressionCondition Name="Closed">
+			<RuleExpressionCondition.Expression>
+				<ns42:CodeFieldReferenceExpression FieldName="_closed" xmlns:ns42="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns43:CodeFieldReferenceExpression.TargetObject xmlns:ns43="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+						<ns44:CodeThisReferenceExpression xmlns:ns44="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+					</ns43:CodeFieldReferenceExpression.TargetObject>
+				</ns42:CodeFieldReferenceExpression>
+			</RuleExpressionCondition.Expression>
+		</RuleExpressionCondition>
+		<RuleExpressionCondition Name="ReSubmit">
+			<RuleExpressionCondition.Expression>
+				<ns45:CodeFieldReferenceExpression FieldName="_reSubmit" xmlns:ns45="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns46:CodeFieldReferenceExpression.TargetObject xmlns:ns46="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+						<ns47:CodeThisReferenceExpression xmlns:ns47="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+					</ns46:CodeFieldReferenceExpression.TargetObject>
+				</ns45:CodeFieldReferenceExpression>
+			</RuleExpressionCondition.Expression>
+		</RuleExpressionCondition>
+		<RuleExpressionCondition Expression="{p3:Null}" Name="System.Workflow.ComponentModel.Serialization.NullExtension" xmlns:p3="http://schemas.microsoft.com/winfx/2006/xaml" />
+		<RuleExpressionCondition Name="NotFixed">
+			<RuleExpressionCondition.Expression>
+				<ns48:CodeFieldReferenceExpression FieldName="_notFixed" xmlns:ns48="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns49:CodeFieldReferenceExpression.TargetObject xmlns:ns49="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+						<ns50:CodeThisReferenceExpression xmlns:ns50="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+					</ns49:CodeFieldReferenceExpression.TargetObject>
+				</ns48:CodeFieldReferenceExpression>
+			</RuleExpressionCondition.Expression>
+		</RuleExpressionCondition>
+	</RuleDefinitions.Conditions>
+</RuleDefinitions>

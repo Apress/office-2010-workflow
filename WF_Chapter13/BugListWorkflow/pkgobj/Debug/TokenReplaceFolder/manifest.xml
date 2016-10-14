@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="da3726c4-2d6a-470c-9400-53587f9ab07c" SharePointProductVersion="14.0">
+  <Assemblies>
+    <Assembly Location="BugListWorkflow.dll" DeploymentTarget="GlobalAssemblyCache" />
+  </Assemblies>
+  <TemplateFiles>
+    <TemplateFile Location="LAYOUTS\BugListWorkflow\Workflow1\Chapter13Association.aspx" />
+  </TemplateFiles>
+  <FeatureManifests>
+    <FeatureManifest Location="BugListWorkflow_Feature1\Feature.xml" />
+  </FeatureManifests>
+</Solution>

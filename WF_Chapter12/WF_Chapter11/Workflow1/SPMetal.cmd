@@ -1,0 +1,1 @@
+"C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\BIN\SPMetal" /web:http://omega5/part3 /namespace:WF_Chapter12.Workflow1.SPPart3 /code:SPPart3.cs /parameters:SPMetal.xml

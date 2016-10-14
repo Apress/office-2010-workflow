@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="8d0056aa-db86-4fd3-8dae-aceedf48c0e6" SharePointProductVersion="14.0">
+  <Assemblies>
+    <Assembly Location="ActivityLibrary.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="ActivityLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9d6384a93fc3e8f6" Namespace="ActivityLibrary" TypeName="*" />
+      </SafeControls>
+    </Assembly>
+    <Assembly Location="WF_Chapter16.dll" DeploymentTarget="GlobalAssemblyCache" />
+  </Assemblies>
+  <TemplateFiles>
+    <TemplateFile Location="1033\Workflow\ActivityLibrary.actions" />
+  </TemplateFiles>
+  <FeatureManifests>
+    <FeatureManifest Location="WF_Chapter16_Feature1\Feature.xml" />
+  </FeatureManifests>
+</Solution>

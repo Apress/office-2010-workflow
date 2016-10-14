@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Workflow Task (0x010801) -->
+  <ContentType ID="0x01080100b9f327a7aa4f4d1ba315acdc30608ae4"
+               Name="BugFixed"
+               Group="Custom Content Types"
+               Description="Bug - Fixed"
+               Version="0">
+    <FieldRefs>
+      <FieldRef ID="{9FB079A4-28C7-411E-829C-5891C19DF702}"
+                Name="BugTested"
+                Required="FALSE"
+                ShowInNewForm="FALSE"
+                ShowInDisplayForm="TRUE"
+                ShowInEditForm="TRUE"/>
+      <FieldRef ID="{4C1D9606-F044-4D43-AD00-AE3B912764FB}"
+                Name="BugNotFixed"
+                Required="FALSE"
+                ShowInNewForm="FALSE"
+                ShowInDisplayForm="TRUE"
+                ShowInEditForm="TRUE"/>
+      <FieldRef ID="{6CFB14EE-7834-42DE-9E7B-9847D6ADA88A}"
+                Name="Feedback"
+                Required="FALSE"
+                ShowInNewForm="FALSE"
+                ShowInDisplayForm="TRUE"
+                ShowInEditForm="TRUE"/>
+    </FieldRefs>
+  </ContentType>
+</Elements>

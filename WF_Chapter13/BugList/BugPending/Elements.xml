@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Workflow Task (0x010801) -->
+  <ContentType ID="0x0108010035c58d2f345347aaaf424215a9cdc37d"
+               Name="BugPending"
+               Group="Custom Content Types"
+               Description="Bug - Pending"
+               Version="0">
+    <FieldRefs>
+      <FieldRef ID="{E50B3B2E-93B3-4B30-BCE2-29A2168CB635}"
+                Name="BugWAD"
+                Required="FALSE"
+                ShowInNewForm="FALSE"
+                ShowInDisplayForm="TRUE"
+                ShowInEditForm="TRUE"/>
+      <FieldRef ID="{E7C4ED6D-38DD-4A5C-A6EE-14791E7BCC14}"
+                Name="BugPriority"
+                Required="FALSE"
+                ShowInNewForm="FALSE"
+                ShowInDisplayForm="TRUE"
+                ShowInEditForm="TRUE"/>
+      <FieldRef ID="{35A9F18D-6AA9-4580-838C-A9F4DCA2B85C}"
+                Name="BugAssign"
+                Required="FALSE"
+                ShowInNewForm="FALSE"
+                ShowInDisplayForm="TRUE"
+                ShowInEditForm="TRUE"/>
+    </FieldRefs>
+  </ContentType>
+</Elements>

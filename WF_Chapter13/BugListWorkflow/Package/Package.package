@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" Id="da3726c4-2d6a-470c-9400-53587f9ab07c" solutionId="da3726c4-2d6a-470c-9400-53587f9ab07c" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" name="BugListWorkflow">
+    <features>
+        <featureReference itemId="68fe4138-f336-4bbc-90fd-e64506fb0704" />
+    </features>
+</package>

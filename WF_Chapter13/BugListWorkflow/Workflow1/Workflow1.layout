@@ -1,0 +1,431 @@
+﻿<StateMachineWorkflowDesigner xmlns:ns0="clr-namespace:System.Drawing;Assembly=System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" Size="995, 703" AutoSizeMargin="16, 24" AutoSize="False" Location="30, 30" Name="Workflow1" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/workflow">
+	<StateMachineWorkflowDesigner.Designers>
+		<StateDesigner Size="160, 80" AutoSizeMargin="16, 24" Location="46, 71" Name="stateInitial">
+			<StateDesigner.Designers>
+				<EventDrivenDesigner Name="eventInitial" Size="150, 209" Location="54, 104">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Name="onWorkflowActivated1" Size="130, 44" Location="64, 169" />
+						<SetStateDesigner Name="setInitialPending" Size="130, 62" Location="64, 232" />
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Size="160, 84" AutoSizeMargin="16, 24" Location="278, 281" Name="stateAssigned">
+			<StateDesigner.Designers>
+				<StateInitializationDesigner Name="initAssigned" Size="381, 378" Location="286, 314">
+					<StateInitializationDesigner.Designers>
+						<IfElseDesigner Name="ifElseActivity2" Size="361, 231" Location="296, 379">
+							<IfElseDesigner.Designers>
+								<IfElseBranchDesigner Name="ifNotCreated" Size="150, 128" Location="315, 453">
+									<IfElseBranchDesigner.Designers>
+										<CallExternalMethodActivityDesigner Name="createAssignedTask" Size="130, 44" Location="325, 518" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+								<IfElseBranchDesigner Name="ifElseBranchActivity2" Size="150, 128" Location="488, 453" />
+							</IfElseDesigner.Designers>
+						</IfElseDesigner>
+						<CodeDesigner Name="codeInitAssigned" Size="130, 44" Location="411, 629" />
+					</StateInitializationDesigner.Designers>
+				</StateInitializationDesigner>
+				<EventDrivenDesigner Name="eventAssigned" Size="727, 396" Location="286, 340">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Name="onAssignedChanged" Size="130, 44" Location="584, 405" />
+						<IfElseDesigner Name="ifElseActivity3" Size="707, 249" Location="296, 468">
+							<IfElseDesigner.Designers>
+								<IfElseBranchDesigner Name="ifAssignedFixed" Size="150, 146" Location="315, 542">
+									<IfElseBranchDesigner.Designers>
+										<SetStateDesigner Name="setAssignedFixed" Size="130, 62" Location="325, 607" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+								<IfElseBranchDesigner Name="ifAssignedWad" Size="150, 146" Location="488, 542">
+									<IfElseBranchDesigner.Designers>
+										<SetStateDesigner Name="setAssignedWad" Size="130, 44" Location="498, 616" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+								<IfElseBranchDesigner Name="ifAssignedWaiting" Size="150, 146" Location="661, 542">
+									<IfElseBranchDesigner.Designers>
+										<SetStateDesigner Name="setAssignedWaiting" Size="130, 62" Location="671, 607" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+								<IfElseBranchDesigner Name="ifAssignedStated" Size="150, 146" Location="834, 542">
+									<IfElseBranchDesigner.Designers>
+										<SetStateDesigner Name="setAssignedActive" Size="130, 62" Location="844, 607" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+							</IfElseDesigner.Designers>
+						</IfElseDesigner>
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Size="188, 84" AutoSizeMargin="16, 24" AutoSize="False" Location="501, 302" Name="stateWad">
+			<StateDesigner.Designers>
+				<StateInitializationDesigner Name="initWad" Size="150, 185" Location="213, 141">
+					<StateInitializationDesigner.Designers>
+						<CallExternalMethodActivityDesigner Name="createWadTask" Size="130, 41" Location="223, 206" />
+						<CodeDesigner Name="codeInitWad" Size="130, 41" Location="223, 266" />
+					</StateInitializationDesigner.Designers>
+				</StateInitializationDesigner>
+				<EventDrivenDesigner Name="eventWad" Size="612, 625" Location="221, 154">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Name="onWadChanged" Size="130, 41" Location="462, 219" />
+						<IfElseDesigner Name="ifElseActivity5" Size="592, 481" Location="231, 279">
+							<IfElseDesigner.Designers>
+								<IfElseBranchDesigner Name="ifWadClosed" Size="150, 378" Location="250, 353">
+									<IfElseBranchDesigner.Designers>
+										<CallExternalMethodActivityDesigner Name="completeWad" Size="130, 41" Location="260, 418" />
+										<CallExternalMethodActivityDesigner Name="completeWadWork" Size="130, 44" Location="260, 478" />
+										<CodeDesigner Name="codeWadClosed" Size="130, 41" Location="260, 541" />
+										<SetStateDesigner Name="setWadClosed" Size="130, 44" Location="260, 601" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+								<IfElseBranchDesigner Name="ifWadResubmit" Size="381, 378" Location="423, 353">
+									<IfElseBranchDesigner.Designers>
+										<CallExternalMethodActivityDesigner Name="completeWadResubmit" Size="130, 44" Location="548, 418" />
+										<IfElseDesigner Name="ifElseActivity6" Size="361, 231" Location="433, 481">
+											<IfElseDesigner.Designers>
+												<IfElseBranchDesigner Name="ifWadAssigned" Size="150, 128" Location="452, 555">
+													<IfElseBranchDesigner.Designers>
+														<SetStateDesigner Name="setWadAssigned" Size="130, 44" Location="462, 620" />
+													</IfElseBranchDesigner.Designers>
+												</IfElseBranchDesigner>
+												<IfElseBranchDesigner Name="ifWadNotAssigned" Size="150, 128" Location="625, 555">
+													<IfElseBranchDesigner.Designers>
+														<SetStateDesigner Name="setWadPending" Size="130, 44" Location="635, 620" />
+													</IfElseBranchDesigner.Designers>
+												</IfElseBranchDesigner>
+											</IfElseDesigner.Designers>
+										</IfElseDesigner>
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+							</IfElseDesigner.Designers>
+						</IfElseDesigner>
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Size="188, 84" AutoSizeMargin="16, 24" Location="434, 420" Name="stateActive">
+			<StateDesigner.Designers>
+				<StateInitializationDesigner Name="initActive" Size="150, 125" Location="442, 453">
+					<StateInitializationDesigner.Designers>
+						<CodeDesigner Name="codeInitActive" Size="130, 41" Location="452, 518" />
+					</StateInitializationDesigner.Designers>
+				</StateInitializationDesigner>
+				<EventDrivenDesigner Name="eventActive" Size="727, 396" Location="442, 479">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Name="onActiveChanged" Size="130, 44" Location="740, 544" />
+						<IfElseDesigner Name="ifElseActivity4" Size="707, 249" Location="452, 607">
+							<IfElseDesigner.Designers>
+								<IfElseBranchDesigner Name="ifActiveFixed" Size="150, 146" Location="471, 681">
+									<IfElseBranchDesigner.Designers>
+										<SetStateDesigner Name="setActiveFixed" Size="130, 44" Location="481, 755" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+								<IfElseBranchDesigner Name="ifActiveWad" Size="150, 146" Location="644, 681">
+									<IfElseBranchDesigner.Designers>
+										<SetStateDesigner Name="setActiveWad" Size="130, 44" Location="654, 755" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+								<IfElseBranchDesigner Name="ifActiveWaiting" Size="150, 146" Location="817, 681">
+									<IfElseBranchDesigner.Designers>
+										<SetStateDesigner Name="setActiveWaiting" Size="130, 62" Location="827, 746" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+								<IfElseBranchDesigner Name="ifActiveNotStarted" Size="150, 146" Location="990, 681">
+									<IfElseBranchDesigner.Designers>
+										<SetStateDesigner Name="setActiveAssigned" Size="130, 62" Location="1000, 746" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+							</IfElseDesigner.Designers>
+						</IfElseDesigner>
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Size="188, 84" AutoSizeMargin="16, 24" AutoSize="False" Location="87, 456" Name="stateWaiting">
+			<StateDesigner.Designers>
+				<StateInitializationDesigner Name="initWaiting" Size="150, 188" Location="95, 489">
+					<StateInitializationDesigner.Designers>
+						<CallExternalMethodActivityDesigner Name="createWaitingTask" Size="130, 44" Location="105, 554" />
+						<CodeDesigner Name="codeInitWaiting" Size="130, 41" Location="105, 617" />
+					</StateInitializationDesigner.Designers>
+				</StateInitializationDesigner>
+				<EventDrivenDesigner Name="eventWaiting" Size="612, 646" Location="95, 515">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Name="onWaitingChanged" Size="130, 44" Location="336, 580" />
+						<IfElseDesigner Name="ifElseActivity7" Size="592, 499" Location="105, 643">
+							<IfElseDesigner.Designers>
+								<IfElseBranchDesigner Name="ifWaitingClosed" Size="150, 396" Location="124, 717">
+									<IfElseBranchDesigner.Designers>
+										<CallExternalMethodActivityDesigner Name="completeWaiting" Size="130, 44" Location="134, 782" />
+										<CallExternalMethodActivityDesigner Name="completeWaitingWork" Size="130, 44" Location="134, 845" />
+										<CodeDesigner Name="codeWaitingClosed" Size="130, 44" Location="134, 908" />
+										<SetStateDesigner Name="setWaitingClosed" Size="130, 62" Location="134, 971" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+								<IfElseBranchDesigner Name="ifWaitingResubmit" Size="381, 396" Location="297, 717">
+									<IfElseBranchDesigner.Designers>
+										<CallExternalMethodActivityDesigner Name="completeWaitingResubmit" Size="130, 44" Location="422, 782" />
+										<IfElseDesigner Name="ifElseActivity8" Size="361, 249" Location="307, 845">
+											<IfElseDesigner.Designers>
+												<IfElseBranchDesigner Name="ifWaitingAssigned" Size="150, 146" Location="326, 919">
+													<IfElseBranchDesigner.Designers>
+														<SetStateDesigner Name="setWaitingAssigned" Size="130, 62" Location="336, 984" />
+													</IfElseBranchDesigner.Designers>
+												</IfElseBranchDesigner>
+												<IfElseBranchDesigner Name="ifWaitingNotAssigned" Size="150, 146" Location="499, 919">
+													<IfElseBranchDesigner.Designers>
+														<SetStateDesigner Name="setWaitingPending" Size="130, 62" Location="509, 984" />
+													</IfElseBranchDesigner.Designers>
+												</IfElseBranchDesigner>
+											</IfElseDesigner.Designers>
+										</IfElseDesigner>
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+							</IfElseDesigner.Designers>
+						</IfElseDesigner>
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Size="188, 84" AutoSizeMargin="16, 24" Location="686, 471" Name="stateFixed">
+			<StateDesigner.Designers>
+				<StateInitializationDesigner Name="initFixed" Size="150, 185" Location="694, 504">
+					<StateInitializationDesigner.Designers>
+						<CallExternalMethodActivityDesigner Name="createFixedTask" Size="130, 41" Location="704, 569" />
+						<CodeDesigner Name="codeInitFixed" Size="130, 41" Location="704, 629" />
+					</StateInitializationDesigner.Designers>
+				</StateInitializationDesigner>
+				<EventDrivenDesigner Name="eventFixed" Size="381, 558" Location="694, 530">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Name="onFixedChanged" Size="130, 41" Location="819, 595" />
+						<IfElseDesigner Name="ifElseActivity9" Size="361, 414" Location="704, 655">
+							<IfElseDesigner.Designers>
+								<IfElseBranchDesigner Name="ifFixed" Size="150, 311" Location="723, 729">
+									<IfElseBranchDesigner.Designers>
+										<CallExternalMethodActivityDesigner Name="completeFixed" Size="130, 41" Location="733, 794" />
+										<CallExternalMethodActivityDesigner Name="completeFixedWork" Size="130, 44" Location="733, 854" />
+										<CodeDesigner Name="codeFixedClosed" Size="130, 41" Location="733, 917" />
+										<SetStateDesigner Name="setFixedClosed" Size="130, 44" Location="733, 977" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+								<IfElseBranchDesigner Name="ifNotFixed" Size="150, 311" Location="896, 729">
+									<IfElseBranchDesigner.Designers>
+										<CallExternalMethodActivityDesigner Name="completeFixedAssigned" Size="130, 44" Location="906, 794" />
+										<CodeDesigner Name="codeFixedNotFixed" Size="130, 44" Location="906, 857" />
+										<SetStateDesigner Name="setFixedAsigned" Size="130, 44" Location="906, 920" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+							</IfElseDesigner.Designers>
+						</IfElseDesigner>
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Size="160, 80" AutoSizeMargin="16, 24" Location="622, 623" Name="stateFinal" />
+		<StateDesigner Size="160, 84" AutoSizeMargin="16, 24" AutoSize="False" Location="145, 173" Name="statePending">
+			<StateDesigner.Designers>
+				<StateInitializationDesigner Name="initPending" Size="150, 188" Location="153, 206">
+					<StateInitializationDesigner.Designers>
+						<CallExternalMethodActivityDesigner Name="createPendingTask" Size="130, 44" Location="163, 271" />
+						<CodeDesigner Name="codeInitPending" Size="130, 41" Location="163, 334" />
+					</StateInitializationDesigner.Designers>
+				</StateInitializationDesigner>
+				<EventDrivenDesigner Name="eventPending" Size="381, 459" Location="153, 232">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Name="onPendingChanged" Size="130, 44" Location="278, 297" />
+						<IfElseDesigner Name="ifElseActivity1" Size="361, 312" Location="163, 360">
+							<IfElseDesigner.Designers>
+								<IfElseBranchDesigner Name="ifPendingWad" Size="150, 209" Location="182, 434">
+									<IfElseBranchDesigner.Designers>
+										<CallExternalMethodActivityDesigner Name="completePendingWad" Size="130, 44" Location="192, 499" />
+										<SetStateDesigner Name="setPendingWad" Size="130, 44" Location="192, 562" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+								<IfElseBranchDesigner Name="ifPendingAssigned" Size="150, 209" Location="355, 434">
+									<IfElseBranchDesigner.Designers>
+										<CallExternalMethodActivityDesigner Name="completePendingAssigned" Size="130, 44" Location="365, 499" />
+										<SetStateDesigner Name="setPendingAssigned" Size="130, 62" Location="365, 562" />
+									</IfElseBranchDesigner.Designers>
+								</IfElseBranchDesigner>
+							</IfElseDesigner.Designers>
+						</IfElseDesigner>
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+	</StateMachineWorkflowDesigner.Designers>
+	<StateMachineWorkflowDesigner.DesignerConnectors>
+		<StateDesignerConnector TargetActivity="statePending" SetStateName="setInitialPending" SourceActivity="stateInitial" TargetConnectionIndex="0" SourceStateName="stateInitial" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="eventInitial" SourceConnectionIndex="0" TargetStateName="statePending">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="150" Y="115" />
+				<ns0:Point X="225" Y="115" />
+				<ns0:Point X="225" Y="173" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="stateFixed" SetStateName="setAssignedFixed" SourceActivity="stateAssigned" TargetConnectionIndex="0" SourceStateName="stateAssigned" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="eventAssigned" SourceConnectionIndex="1" TargetStateName="stateFixed">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="402" Y="351" />
+				<ns0:Point X="450" Y="351" />
+				<ns0:Point X="450" Y="408" />
+				<ns0:Point X="780" Y="408" />
+				<ns0:Point X="780" Y="471" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="stateWad" SetStateName="setAssignedWad" SourceActivity="stateAssigned" TargetConnectionIndex="0" SourceStateName="stateAssigned" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="eventAssigned" SourceConnectionIndex="1" TargetStateName="stateWad">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="402" Y="351" />
+				<ns0:Point X="450" Y="351" />
+				<ns0:Point X="450" Y="294" />
+				<ns0:Point X="595" Y="294" />
+				<ns0:Point X="595" Y="302" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="stateWaiting" SetStateName="setAssignedWaiting" SourceActivity="stateAssigned" TargetConnectionIndex="0" SourceStateName="stateAssigned" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="eventAssigned" SourceConnectionIndex="1" TargetStateName="stateWaiting">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="402" Y="351" />
+				<ns0:Point X="445" Y="351" />
+				<ns0:Point X="445" Y="408" />
+				<ns0:Point X="181" Y="408" />
+				<ns0:Point X="181" Y="456" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="stateActive" SetStateName="setAssignedActive" SourceActivity="stateAssigned" TargetConnectionIndex="0" SourceStateName="stateAssigned" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="eventAssigned" SourceConnectionIndex="1" TargetStateName="stateActive">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="402" Y="351" />
+				<ns0:Point X="450" Y="351" />
+				<ns0:Point X="450" Y="408" />
+				<ns0:Point X="528" Y="408" />
+				<ns0:Point X="528" Y="420" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="stateFinal" SetStateName="setWadClosed" SourceActivity="stateWad" TargetConnectionIndex="0" SourceStateName="stateWad" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="eventWad" SourceConnectionIndex="1" TargetStateName="stateFinal">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="601" Y="372" />
+				<ns0:Point X="886" Y="372" />
+				<ns0:Point X="886" Y="611" />
+				<ns0:Point X="702" Y="611" />
+				<ns0:Point X="702" Y="623" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="stateAssigned" SetStateName="setWadAssigned" SourceActivity="stateWad" TargetConnectionIndex="0" SourceStateName="stateWad" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="eventWad" SourceConnectionIndex="1" TargetStateName="stateAssigned">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="601" Y="372" />
+				<ns0:Point X="694" Y="372" />
+				<ns0:Point X="694" Y="273" />
+				<ns0:Point X="358" Y="273" />
+				<ns0:Point X="358" Y="281" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="statePending" SetStateName="setWasPending" SourceActivity="stateWad" TargetConnectionIndex="0" SourceStateName="stateWad" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="eventWad" SourceConnectionIndex="1" TargetStateName="statePending">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="601" Y="372" />
+				<ns0:Point X="697" Y="372" />
+				<ns0:Point X="697" Y="165" />
+				<ns0:Point X="225" Y="165" />
+				<ns0:Point X="225" Y="173" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="stateFixed" SetStateName="setActiveFixed" SourceActivity="stateActive" TargetConnectionIndex="0" SourceStateName="stateActive" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="eventActive" SourceConnectionIndex="1" TargetStateName="stateFixed">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="542" Y="490" />
+				<ns0:Point X="634" Y="490" />
+				<ns0:Point X="634" Y="463" />
+				<ns0:Point X="780" Y="463" />
+				<ns0:Point X="780" Y="471" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="stateWad" SetStateName="setActiveWad" SourceActivity="stateActive" TargetConnectionIndex="0" SourceStateName="stateActive" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="eventActive" SourceConnectionIndex="1" TargetStateName="stateWad">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="542" Y="490" />
+				<ns0:Point X="634" Y="490" />
+				<ns0:Point X="634" Y="459" />
+				<ns0:Point X="699" Y="459" />
+				<ns0:Point X="699" Y="294" />
+				<ns0:Point X="595" Y="294" />
+				<ns0:Point X="595" Y="302" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="stateWaiting" SetStateName="setActiveWaiting" SourceActivity="stateActive" TargetConnectionIndex="0" SourceStateName="stateActive" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="eventActive" SourceConnectionIndex="1" TargetStateName="stateWaiting">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="542" Y="490" />
+				<ns0:Point X="629" Y="490" />
+				<ns0:Point X="629" Y="408" />
+				<ns0:Point X="181" Y="408" />
+				<ns0:Point X="181" Y="456" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="stateActive" SetStateName="setActiveAssigned" SourceActivity="stateActive" TargetConnectionIndex="0" SourceStateName="stateActive" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="eventActive" SourceConnectionIndex="1" TargetStateName="stateActive">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="542" Y="490" />
+				<ns0:Point X="632" Y="490" />
+				<ns0:Point X="632" Y="412" />
+				<ns0:Point X="528" Y="412" />
+				<ns0:Point X="528" Y="420" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="stateFinal" SetStateName="setWaitingClosed" SourceActivity="stateWaiting" TargetConnectionIndex="0" SourceStateName="stateWaiting" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="eventWaiting" SourceConnectionIndex="1" TargetStateName="stateFinal">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="204" Y="526" />
+				<ns0:Point X="287" Y="526" />
+				<ns0:Point X="287" Y="611" />
+				<ns0:Point X="702" Y="611" />
+				<ns0:Point X="702" Y="623" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="stateAssigned" SetStateName="setWaitingAssigned" SourceActivity="stateWaiting" TargetConnectionIndex="0" SourceStateName="stateWaiting" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="eventWaiting" SourceConnectionIndex="1" TargetStateName="stateAssigned">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="204" Y="526" />
+				<ns0:Point X="286" Y="526" />
+				<ns0:Point X="286" Y="545" />
+				<ns0:Point X="78" Y="545" />
+				<ns0:Point X="78" Y="273" />
+				<ns0:Point X="358" Y="273" />
+				<ns0:Point X="358" Y="281" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="statePending" SetStateName="setWaitingPending" SourceActivity="stateWaiting" TargetConnectionIndex="0" SourceStateName="stateWaiting" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="eventWaiting" SourceConnectionIndex="1" TargetStateName="statePending">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="204" Y="526" />
+				<ns0:Point X="281" Y="526" />
+				<ns0:Point X="281" Y="549" />
+				<ns0:Point X="81" Y="549" />
+				<ns0:Point X="81" Y="165" />
+				<ns0:Point X="225" Y="165" />
+				<ns0:Point X="225" Y="173" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="stateFinal" SetStateName="setFixedClosed" SourceActivity="stateFixed" TargetConnectionIndex="0" SourceStateName="stateFixed" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="eventFixed" SourceConnectionIndex="1" TargetStateName="stateFinal">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="789" Y="541" />
+				<ns0:Point X="886" Y="541" />
+				<ns0:Point X="886" Y="611" />
+				<ns0:Point X="702" Y="611" />
+				<ns0:Point X="702" Y="623" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="stateAssigned" SetStateName="setFixedAsigned" SourceActivity="stateFixed" TargetConnectionIndex="0" SourceStateName="stateFixed" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="eventFixed" SourceConnectionIndex="1" TargetStateName="stateAssigned">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="789" Y="541" />
+				<ns0:Point X="886" Y="541" />
+				<ns0:Point X="886" Y="273" />
+				<ns0:Point X="358" Y="273" />
+				<ns0:Point X="358" Y="281" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="stateWad" SetStateName="setPendingWad" SourceActivity="statePending" TargetConnectionIndex="0" SourceStateName="statePending" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="eventPending" SourceConnectionIndex="1" TargetStateName="stateWad">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="264" Y="243" />
+				<ns0:Point X="595" Y="243" />
+				<ns0:Point X="595" Y="302" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetActivity="stateAssigned" SetStateName="setPendingAssigned" SourceActivity="statePending" TargetConnectionIndex="0" SourceStateName="statePending" TargetConnectionEdge="Top" SourceConnectionEdge="Right" EventHandlerName="eventPending" SourceConnectionIndex="1" TargetStateName="stateAssigned">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="264" Y="243" />
+				<ns0:Point X="358" Y="243" />
+				<ns0:Point X="358" Y="281" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+	</StateMachineWorkflowDesigner.DesignerConnectors>
+</StateMachineWorkflowDesigner>

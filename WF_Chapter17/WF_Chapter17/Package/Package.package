@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="811051cb-016a-4659-a782-f422313f7081" solutionId="811051cb-016a-4659-a782-f422313f7081" resetWebServer="false" name="WF_Chapter17" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <customAssembly location="FileService.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\FileService\bin\Debug\FileService.dll">
+      <safeControls>
+        <safeControl assemblyName="FileService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=75da00303dcde51d " namespaceName="FileService" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </customAssembly>
+  </assemblies>
+  <features>
+    <featureReference itemId="7457e13f-a914-43f7-895c-29da1b576ad1" />
+    <featureReference itemId="09714428-1a08-4039-b5f6-d02729149cc5" />
+  </features>
+</package>

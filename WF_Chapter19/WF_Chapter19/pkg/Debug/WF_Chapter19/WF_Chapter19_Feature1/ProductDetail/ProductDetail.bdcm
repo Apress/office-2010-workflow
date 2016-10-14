@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/windows/2007/BusinessDataCatalog" Name="ProductDetail">
+  <LobSystems>
+    <LobSystem Name="ProductDetail" Type="DotNetAssembly">
+      <LobSystemInstances>
+        <LobSystemInstance Name="ProductDetail" />
+      </LobSystemInstances>
+      <Entities>
+        <Entity Name="ProductDetail" Namespace="WF_Chapter19.ProductDetail" EstimatedInstanceCount="1000" Version="1.0.0.70">
+          <Properties>
+            <Property Name="Class" Type="System.String">
+              WF_Chapter19.ProductDetail.ProductDetailService, ProductDetail
+            </Property>
+          </Properties>
+          <Identifiers>
+            <Identifier Name="ProductID" TypeName="System.Int32" />
+          </Identifiers>
+          <Methods>
+            <Method Name="ReadList">
+              <Parameters>
+                <Parameter Direction="Return" Name="productList">
+                  <TypeDescriptor TypeName="System.Collections.Generic.IEnumerable`1[[WF_Chapter19.ProductDetail.ProductDetail, ProductDetail]]" IsCollection="true" Name="ProductDetailList">
+                    <TypeDescriptors>
+                      <TypeDescriptor Name="ProductDetail" TypeName="WF_Chapter19.ProductDetail.ProductDetail, ProductDetail">
+                        <TypeDescriptors>
+                          <TypeDescriptor Name="ProductID" TypeName="System.Int32" IdentifierName="ProductID" IsCollection="false" />
+                          <TypeDescriptor Name="Name" TypeName="System.String" />
+                          <TypeDescriptor Name="ProductNumber" TypeName="System.String" />
+                          <TypeDescriptor Name="MakeFlag" TypeName="System.Boolean" IsCollection="false" />
+                          <TypeDescriptor Name="FinishedGoodsFlag" TypeName="System.Boolean" IsCollection="false" />
+                          <TypeDescriptor Name="Color" TypeName="System.String" />
+                          <TypeDescriptor Name="StandardCost" TypeName="System.Decimal" IsCollection="false" />
+                          <TypeDescriptor Name="ListPrice" TypeName="System.Decimal" IsCollection="false" />
+                          <TypeDescriptor Name="Size" TypeName="System.String" />
+                          <TypeDescriptor Name="Weight" TypeName="System.Decimal" IsCollection="false" />
+                          <TypeDescriptor Name="ProductLine" TypeName="System.String" />
+                          <TypeDescriptor Name="Class" TypeName="System.String" />
+                          <TypeDescriptor Name="Style" TypeName="System.String" />
+                          <TypeDescriptor Name="Category" TypeName="System.String" />
+                          <TypeDescriptor Name="Subcategory" TypeName="System.String" />
+                          <TypeDescriptor Name="ProductModel" TypeName="System.String" />
+                          <TypeDescriptor Name="SizeUOM" TypeName="System.String" />
+                          <TypeDescriptor Name="WeightUOM" TypeName="System.String" />
+                        </TypeDescriptors>
+                      </TypeDescriptor>
+                    </TypeDescriptors>
+                  </TypeDescriptor>
+                </Parameter>
+              </Parameters>
+              <MethodInstances>
+                <MethodInstance Type="Finder" ReturnParameterName="productList" Default="true" Name="ReadList" DefaultDisplayName="ProductDetail List" />
+              </MethodInstances>
+            </Method>
+
+            <Method Name="ReadItem">
+              <Parameters>
+                <Parameter Direction="In" Name="productID">
+                  <TypeDescriptor TypeName="System.Int32" IdentifierName="ProductID" Name="ProductID" IsCollection="false" />
+                </Parameter>
+                <Parameter Direction="Return" Name="product">
+                  <TypeDescriptor TypeName="WF_Chapter19.ProductDetail.ProductDetail, ProductDetail" Name="ProductDetail">
+                    <TypeDescriptors>
+                      <TypeDescriptor TypeName="System.Int32" IdentifierName="ProductID" Name="ProductID" IsCollection="false" />
+                      <TypeDescriptor TypeName="System.String" Name="Name" />
+                      <TypeDescriptor Name="ProductNumber" TypeName="System.String" />
+                      <TypeDescriptor Name="MakeFlag" TypeName="System.Boolean" IsCollection="false" />
+                      <TypeDescriptor Name="FinishedGoodsFlag" TypeName="System.Boolean" IsCollection="false" />
+                      <TypeDescriptor Name="Color" TypeName="System.String" />
+                      <TypeDescriptor Name="StandardCost" TypeName="System.Decimal" IsCollection="false" />
+                      <TypeDescriptor Name="ListPrice" TypeName="System.Decimal" IsCollection="false" />
+                      <TypeDescriptor Name="Size" TypeName="System.String" />
+                      <TypeDescriptor Name="Weight" TypeName="System.Decimal" IsCollection="false" />
+                      <TypeDescriptor Name="ProductLine" TypeName="System.String" />
+                      <TypeDescriptor Name="Class" TypeName="System.String" />
+                      <TypeDescriptor Name="Style" TypeName="System.String" />
+                      <TypeDescriptor Name="Category" TypeName="System.String" />
+                      <TypeDescriptor Name="Subcategory" TypeName="System.String" />
+                      <TypeDescriptor Name="ProductModel" TypeName="System.String" />
+                      <TypeDescriptor Name="SizeUOM" TypeName="System.String" />
+                      <TypeDescriptor Name="WeightUOM" TypeName="System.String" />
+                    </TypeDescriptors>
+                  </TypeDescriptor>
+                </Parameter>
+              </Parameters>
+              <MethodInstances>
+                <MethodInstance Type="SpecificFinder" ReturnParameterName="product" Default="true" Name="ReadItem" DefaultDisplayName="Read ProductDetail" ReturnTypeDescriptorPath="ProductDetail" />
+              </MethodInstances>
+            </Method>
+          </Methods>
+        </Entity>
+        <Entity Name="Review" Namespace="WF_Chapter19.ProductDetail" Version="1.0.0.79">
+          <Properties>
+            <Property Name="Class" Type="System.String">WF_Chapter19.ProductDetail.ReviewService, ProductDetail</Property>
+          </Properties>
+          <Identifiers>
+            <Identifier Name="ProductReviewID" TypeName="System.Int32" />
+          </Identifiers>
+          <Methods>
+            <Method Name="ReadItem">
+              <Parameters>
+                <Parameter Name="productReviewID" Direction="In">
+                  <TypeDescriptor Name="ProductReviewID" TypeName="System.Int32" IsCollection="false" IdentifierName="ProductReviewID" /></Parameter>
+                <Parameter Name="review" Direction="Return">
+                  <TypeDescriptor Name="Review" TypeName="WF_Chapter19.ProductDetail.Review, ProductDetail" IsCollection="false">
+                    <TypeDescriptors>
+                      <TypeDescriptor Name="ProductReviewID" TypeName="System.Int32" IsCollection="false" IdentifierName="ProductReviewID" />
+                      <TypeDescriptor Name="ProductID" TypeName="System.Int32" IsCollection="false" ReadOnly="true" IdentifierEntityName="ProductDetail" IdentifierEntityNamespace="WF_Chapter19.ProductDetail" IdentifierName="ProductID" />
+                      <TypeDescriptor Name="ReviewerName" TypeName="System.String" />
+                      <TypeDescriptor Name="EmailAddress" TypeName="System.String" />
+                      <TypeDescriptor Name="Rating" TypeName="System.Int32" IsCollection="false" />
+                      <TypeDescriptor Name="Comments" TypeName="System.String" />
+                      <TypeDescriptor Name="ReviewDate" TypeName="System.DateTime" IsCollection="false" ReadOnly="true" />
+                      <TypeDescriptor Name="ModifiedDate" TypeName="System.DateTime" IsCollection="false" ReadOnly="true" /></TypeDescriptors></TypeDescriptor></Parameter>
+              </Parameters>
+              <MethodInstances>
+                <MethodInstance Name="ReadItem" Type="SpecificFinder" DefaultDisplayName="Read Review" ReturnParameterName="review" ReturnTypeDescriptorPath="Review" />
+              </MethodInstances></Method>
+            <Method Name="ReadList">
+              <Parameters>
+                <Parameter Name="reviewList" Direction="Return">
+                  <TypeDescriptor Name="ReviewList" TypeName="System.Collections.Generic.IEnumerable`1[[WF_Chapter19.ProductDetail.Review, ProductDetail]]" IsCollection="true">
+                    <TypeDescriptors>
+                      <TypeDescriptor Name="Review" IsCollection="false" TypeName="WF_Chapter19.ProductDetail.Review, ProductDetail">
+                        <TypeDescriptors>
+                          <TypeDescriptor Name="ProductReviewID" IdentifierName="ProductReviewID" IsCollection="false" TypeName="System.Int32" />
+                          <TypeDescriptor Name="ProductID" IsCollection="false" TypeName="System.Int32" IdentifierEntityName="ProductDetail" IdentifierEntityNamespace="WF_Chapter19.ProductDetail" IdentifierName="ProductID" />
+                          <TypeDescriptor Name="ReviewerName" TypeName="System.String" />
+                          <TypeDescriptor Name="EmailAddress" TypeName="System.String" />
+                          <TypeDescriptor Name="Rating" IsCollection="false" TypeName="System.Int32" />
+                          <TypeDescriptor Name="Comments" TypeName="System.String" />
+                          <TypeDescriptor Name="ReviewDate" IsCollection="false" TypeName="System.DateTime" />
+                          <TypeDescriptor Name="ModifiedDate" IsCollection="false" TypeName="System.DateTime" /></TypeDescriptors></TypeDescriptor></TypeDescriptors></TypeDescriptor></Parameter>
+              </Parameters>
+              <MethodInstances>
+                <MethodInstance Name="ReadList" Type="Finder" ReturnParameterName="reviewList" ReturnTypeDescriptorPath="ReviewList" />
+              </MethodInstances></Method>
+            <Method Name="Create">
+              <Parameters>
+                <Parameter Name="returnReview" Direction="Return">
+                  <TypeDescriptor Name="ReturnReview" IsCollection="false" TypeName="WF_Chapter19.ProductDetail.Review, ProductDetail">
+                    <TypeDescriptors>
+                      <TypeDescriptor Name="ProductReviewID" IdentifierName="ProductReviewID" IsCollection="false" TypeName="System.Int32" />
+                      <TypeDescriptor Name="ProductID" IsCollection="false" TypeName="System.Int32" IdentifierEntityName="ProductDetail" IdentifierEntityNamespace="WF_Chapter19.ProductDetail" IdentifierName="ProductID" />
+                      <TypeDescriptor Name="ReviewerName" TypeName="System.String" />
+                      <TypeDescriptor Name="EmailAddress" TypeName="System.String" />
+                      <TypeDescriptor Name="Rating" IsCollection="false" TypeName="System.Int32" />
+                      <TypeDescriptor Name="Comments" TypeName="System.String" />
+                      <TypeDescriptor Name="ReviewDate" IsCollection="false" TypeName="System.DateTime" />
+                      <TypeDescriptor Name="ModifiedDate" IsCollection="false" TypeName="System.DateTime" /></TypeDescriptors></TypeDescriptor></Parameter>
+                <Parameter Name="newReview" Direction="In">
+                  <TypeDescriptor Name="NewReview" IsCollection="false" TypeName="WF_Chapter19.ProductDetail.Review, ProductDetail">
+                    <TypeDescriptors>
+                      <TypeDescriptor Name="ProductID" IsCollection="false" TypeName="System.Int32" CreatorField="true" IdentifierEntityName="ProductDetail" IdentifierEntityNamespace="WF_Chapter19.ProductDetail" IdentifierName="ProductID" />
+                      <TypeDescriptor Name="ReviewerName" TypeName="System.String" CreatorField="true" />
+                      <TypeDescriptor Name="EmailAddress" TypeName="System.String" CreatorField="true" />
+                      <TypeDescriptor Name="Rating" IsCollection="false" TypeName="System.Int32" CreatorField="true" />
+                      <TypeDescriptor Name="Comments" TypeName="System.String" CreatorField="true" />
+                      </TypeDescriptors></TypeDescriptor></Parameter>
+              </Parameters>
+              <MethodInstances>
+                <MethodInstance Name="Create" Type="Creator" ReturnParameterName="returnReview" ReturnTypeDescriptorPath="ReturnReview" />
+              </MethodInstances></Method>
+            <Method Name="Delete">
+              <Parameters>
+                <Parameter Name="productReviewID" Direction="In">
+                  <TypeDescriptor Name="ProductReviewID" TypeName="System.Int32" IdentifierEntityName="Review" IdentifierEntityNamespace="WF_Chapter19.ProductDetail" IdentifierName="ProductReviewID" /></Parameter>
+              </Parameters>
+              <MethodInstances>
+                <MethodInstance Name="Delete" Type="Deleter" />
+              </MethodInstances></Method>
+            <Method Name="Update">
+              <Parameters>
+                <Parameter Name="review" Direction="In">
+                  <TypeDescriptor Name="Review" IsCollection="false" TypeName="WF_Chapter19.ProductDetail.Review, ProductDetail">
+                    <TypeDescriptors>
+                      <TypeDescriptor Name="ReviewerName" TypeName="System.String" UpdaterField="true" />
+                      <TypeDescriptor Name="EmailAddress" TypeName="System.String" UpdaterField="true" />
+                      <TypeDescriptor Name="Rating" IsCollection="false" TypeName="System.Int32" UpdaterField="true" />
+                      <TypeDescriptor Name="Comments" TypeName="System.String" UpdaterField="true" />
+                      <TypeDescriptor Name="ProductReviewID" TypeName="System.Int32" IsCollection="false" UpdaterField="true" IdentifierEntityName="Review" IdentifierEntityNamespace="WF_Chapter19.ProductDetail" IdentifierName="ProductReviewID" /></TypeDescriptors></TypeDescriptor></Parameter>
+              </Parameters>
+              <MethodInstances>
+                <MethodInstance Name="Update" Type="Updater" />
+              </MethodInstances></Method>
+          </Methods>
+          </Entity>
+      </Entities>
+    </LobSystem>
+  </LobSystems>
+</Model>

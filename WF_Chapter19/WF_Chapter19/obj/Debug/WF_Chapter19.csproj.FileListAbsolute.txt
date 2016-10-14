@@ -1,0 +1,6 @@
+C:\Books\OfficeWorkflow\Code\WF_Chapter19\WF_Chapter19\bin\Debug\WF_Chapter19.dll.config
+C:\Books\OfficeWorkflow\Code\WF_Chapter19\WF_Chapter19\bin\Debug\WF_Chapter19.dll
+C:\Books\OfficeWorkflow\Code\WF_Chapter19\WF_Chapter19\bin\Debug\WF_Chapter19.pdb
+C:\Books\OfficeWorkflow\Code\WF_Chapter19\WF_Chapter19\obj\Debug\ResolveAssemblyReference.cache
+C:\Books\OfficeWorkflow\Code\WF_Chapter19\WF_Chapter19\obj\Debug\WF_Chapter19.dll
+C:\Books\OfficeWorkflow\Code\WF_Chapter19\WF_Chapter19\obj\Debug\WF_Chapter19.pdb

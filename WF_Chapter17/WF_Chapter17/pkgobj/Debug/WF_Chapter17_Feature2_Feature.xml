@@ -1,0 +1,2 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Title="WF_Chapter17 Feature2" Id="cdaddd7d-74ce-4be7-b887-ecdb82cc759a" ReceiverAssembly="WF_Chapter17, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4ee6fd425db8bda4" ReceiverClass="WF_Chapter17.Features.Feature2.Feature2EventReceiver" Scope="WebApplication"></Feature>

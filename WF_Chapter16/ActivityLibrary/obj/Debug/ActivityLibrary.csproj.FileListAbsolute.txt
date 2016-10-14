@@ -1,0 +1,5 @@
+C:\Books\OfficeWorkflow\Code\WF_Chapter16\ActivityLibrary\bin\Debug\ActivityLibrary.dll
+C:\Books\OfficeWorkflow\Code\WF_Chapter16\ActivityLibrary\bin\Debug\ActivityLibrary.pdb
+C:\Books\OfficeWorkflow\Code\WF_Chapter16\ActivityLibrary\obj\Debug\ResolveAssemblyReference.cache
+C:\Books\OfficeWorkflow\Code\WF_Chapter16\ActivityLibrary\obj\Debug\ActivityLibrary.dll
+C:\Books\OfficeWorkflow\Code\WF_Chapter16\ActivityLibrary\obj\Debug\ActivityLibrary.pdb
